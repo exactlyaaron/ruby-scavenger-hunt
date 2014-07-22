@@ -2,10 +2,23 @@ require 'test_helper'
 
 class VectorTest < MiniTest::Unit::TestCase
 
-  def setup
-    # This is ran before all the tests. Useful
-    # when preparing input data for the objects/methods you
-    # wish to test.
+  # def setup
+  #   # This is ran before all the tests. Useful
+  #   # when preparing input data for the objects/methods you
+  #   # wish to test.
+  # end
+
+  def test_vector_creation
+    @vector = VectorSub.new(1,1)
+    assert_equal(1, @vector.x)
+    assert_equal(1, @vector.y)
+  end
+
+  def test_distance_calculation
+    @vector1 = VectorSub.new(1,1)
+    @vector2 = VectorSub.new(0,1)
+    distance = @vector1.calculate_distance(@vector2.x, @vector2.y)
+    assert_equal(1, distance)
   end
 
 end

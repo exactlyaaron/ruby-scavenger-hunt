@@ -1,4 +1,4 @@
-class VectorSub < Vector
+class VectorSub
 
   attr_accessor :x
   attr_accessor :y
@@ -9,7 +9,7 @@ class VectorSub < Vector
   end
 
   def calculate_distance(end_x, end_y)
-    result = Math.sqrt( (end_x - self.x)**2 + (end_y - self.y)**2 )
+    return Math.sqrt((end_x - self.x)**2 + (end_y - self.y)**2)
   end
 
 end
