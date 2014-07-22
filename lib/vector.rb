@@ -6,6 +6,10 @@ class VectorSub < Vector
   end
 
   def self.pathlength(*points)
+    if points.length < 1
+      return nil
+    end
+
     total = 0
     # points.sort! { |x,y| x[0] <=> y[0] }
     (points.length - 1).times do |i|

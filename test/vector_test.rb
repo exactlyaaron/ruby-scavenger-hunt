@@ -29,4 +29,9 @@ class VectorTest < MiniTest::Unit::TestCase
     assert_equal(2, length)
   end
 
+  def test_adding_integer_to_vector
+    result = VectorSub[1,1] + 1
+    assert_equal(VectorSub[2,2], result)
+  end
+
 end
