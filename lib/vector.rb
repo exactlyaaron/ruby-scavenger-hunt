@@ -33,19 +33,19 @@ class VectorSub < Vector
     hypotenus1 = Math.sqrt(v1[0]**2 + v1[1]**2)
     hypotenus2 = Math.sqrt(v2[0]**2 + v2[1]**2)
 
-    angle1 = Math.cos(v1[0] / hypotenus1)
-    angle2 = Math.cos(v2[0] / hypotenus2)
+    angle1 = Math::acos(v1[0] / hypotenus1)
+    angle2 = Math::acos(v2[0] / hypotenus2)
 
-    radians = angle1 - angle2
+    radians = (angle1 - angle2).round(10)
   end
 
   def calculate_angle(v2)
     hypotenus1 = Math.sqrt(self[0]**2 + self[1]**2)
     hypotenus2 = Math.sqrt(v2[0]**2 + v2[1]**2)
 
-    angle1 = Math.cos(self[0] / hypotenus1)
-    angle2 = Math.cos(v2[0] / hypotenus2)
+    angle1 = Math::acos(self[0] / hypotenus1)
+    angle2 = Math::acos(v2[0] / hypotenus2)
 
-    radians = angle1 - angle2
+    radians = (angle1 - angle2).round(10)
   end
 end

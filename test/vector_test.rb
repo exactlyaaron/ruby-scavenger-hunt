@@ -47,14 +47,14 @@ class VectorTest < MiniTest::Unit::TestCase
     @v1 = VectorSub[2,3]
     @v2 = VectorSub[3,1]
     angle = VectorSub.calculate_angle(@v1, @v2)
-    assert_equal(angle, 0.26730477096022687)
+    assert_equal(angle, (0.6610431688506868).round(10))
   end
 
   def test_angle_instance_method
     @v1 = VectorSub[2,3]
     @v2 = VectorSub[3,1]
     angle = @v1.calculate_angle(@v2)
-    assert_equal(angle, 0.26730477096022687)
+    assert_equal(angle, (0.6610431688506868).round(10))
   end
 
 end
