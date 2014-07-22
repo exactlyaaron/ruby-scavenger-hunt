@@ -17,4 +17,13 @@ class VectorSub < Vector
     end
     total
   end
+
+  def <<(integer)
+    array = []
+    self.each do |int|
+      array << int
+    end
+    array << integer
+    VectorSub.[](*array)
+  end
 end

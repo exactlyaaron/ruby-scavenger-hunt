@@ -35,4 +35,10 @@ class VectorTest < MiniTest::Unit::TestCase
     assert_equal(@v, result)
   end
 
+  def test_shovel_operator
+    @v = VectorSub[2, 2, 1]
+    result = VectorSub[2, 2] << 1
+    assert_equal(@v, result)
+  end
+
 end
