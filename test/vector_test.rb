@@ -29,16 +29,32 @@ class VectorTest < MiniTest::Unit::TestCase
     assert_equal(2, length)
   end
 
+=begin
   def test_adding_integer_to_vector
     @v = VectorSub[2,2]
     result = VectorSub[1,1] + 1
     assert_equal(@v, result)
   end
+=end
 
   def test_shovel_operator
     @v = VectorSub[2, 2, 1]
     result = VectorSub[2, 2] << 1
     assert_equal(@v, result)
+  end
+
+  def test_angle_class_method
+    @v1 = VectorSub[2,3]
+    @v2 = VectorSub[3,1]
+    angle = VectorSub.calculate_angle(@v1, @v2)
+    assert_equal(angle, 0.26730477096022687)
+  end
+
+  def test_angle_instance_method
+    @v1 = VectorSub[2,3]
+    @v2 = VectorSub[3,1]
+    angle = @v1.calculate_angle(@v2)
+    assert_equal(angle, 0.26730477096022687)
   end
 
 end
