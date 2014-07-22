@@ -21,4 +21,12 @@ class VectorTest < MiniTest::Unit::TestCase
     assert_equal(1, distance)
   end
 
+  def test_pathlength_calculation
+    @vector1 = VectorSub[1,1]
+    @vector2 = VectorSub[1,2]
+    @vector3 = VectorSub[1,3]
+    length = VectorSub.pathlength(@vector1, @vector2, @vector3)
+    assert_equal(2, length)
+  end
+
 end
