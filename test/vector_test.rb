@@ -30,8 +30,9 @@ class VectorTest < MiniTest::Unit::TestCase
   end
 
   def test_adding_integer_to_vector
+    @v = VectorSub[2,2]
     result = VectorSub[1,1] + 1
-    assert_equal(VectorSub[2,2], result)
+    assert_equal(@v, result)
   end
 
 end
