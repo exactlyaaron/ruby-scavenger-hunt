@@ -9,15 +9,15 @@ class VectorTest < MiniTest::Unit::TestCase
   # end
 
   def test_vector_creation
-    @vector = VectorSub.new(1,1)
-    assert_equal(1, @vector.x)
-    assert_equal(1, @vector.y)
+    @vector = VectorSub[1,1]
+    assert_equal(1, @vector[0])
+    assert_equal(1, @vector[1])
   end
 
   def test_distance_calculation
-    @vector1 = VectorSub.new(1,1)
-    @vector2 = VectorSub.new(0,1)
-    distance = @vector1.calculate_distance(@vector2.x, @vector2.y)
+    @vector1 = VectorSub[1,1]
+    @vector2 = VectorSub[0,1]
+    distance = @vector1.calculate_distance(@vector2)
     assert_equal(1, distance)
   end
 

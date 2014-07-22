@@ -1,15 +1,8 @@
-class VectorSub
+require 'matrix'
+class VectorSub < Vector
 
-  attr_accessor :x
-  attr_accessor :y
-
-  def initialize(x, y)
-    @x = x
-    @y = y
-  end
-
-  def calculate_distance(end_x, end_y)
-    return Math.sqrt((end_x - self.x)**2 + (end_y - self.y)**2)
+  def calculate_distance(vector2)
+    return Math.sqrt((vector2[0] - self[0])**2 + (vector2[1] - self[1])**2)
   end
 
 end
